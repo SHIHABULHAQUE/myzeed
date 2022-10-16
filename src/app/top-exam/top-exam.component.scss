@@ -1,0 +1,89 @@
+.notificationWrapper{
+    margin-top: 80px;
+    ul{
+        li{
+            margin-bottom: 50px;
+            display: flex;
+            @media (max-width: 767.98px){
+                flex-direction: column;
+                margin-bottom: 30px;
+            }
+            .date{
+                width: 65px;
+                margin-right: 50px;
+                margin-top: auto;
+                margin-bottom: auto;
+                border-right: 2px solid #707070;
+                padding-right: 10px;
+                @media (max-width: 767.98px){
+                    margin-bottom: 15px;
+                }
+                h3{
+                    font-size: 25px;
+                    font-weight: 600;
+                    margin-bottom: 0;
+                    color: #707070;
+                    line-height: 1;
+                }
+                h2{
+                    margin-bottom: 0;
+                    font-size: 50px;
+                    font-weight: 600;
+                    color: #707070;
+                    line-height: 1;
+                }
+            }
+            .detail{
+                width: calc(100% - 115px);
+                background-color: #fff;
+                border-radius: 20px;
+                box-shadow: 0 3px 20px #00000021;
+                padding: 25px;
+                @media (max-width: 767.98px){
+                    width: 100%;
+                }
+                p{
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+.top-xamWrapper {
+    ul {
+        li {
+            .date-download {
+                display: flex;
+                margin-top: 25px;
+
+                @media (max-width: 575.98px) {
+                    flex-direction: column;
+                }
+
+                p {
+                    font-size: 14px;
+                    margin-right: 80px;
+
+                    @media (max-width: 575.98px) {
+                        margin-right: 0;
+                        margin-bottom: 15px;
+                    }
+
+                    img {
+                        margin-right: 10px;
+                    }
+                }
+
+                a {
+                    font-size: 14px;
+                    margin-right: 80px;
+                    color: #000;
+
+                    img {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

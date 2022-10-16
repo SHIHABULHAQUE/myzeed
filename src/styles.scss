@@ -1,1 +1,365 @@
 /* You can add global styles to this file, and also import other style files */
+.inner-banner {
+    margin-top: -75px;
+
+    @media (max-width: 991.98px) {
+        height: 250px;
+    }
+
+    img {
+        width: 100%;
+
+        @media (max-width: 991.98px) {
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+.pageHeading {
+    margin-top: -105px;
+
+    @media (max-width: 767.98px) {
+        margin-top: -80px;
+    }
+
+    h1 {
+        font-size: 42px;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 0;
+
+        @media (max-width: 767.98px) {
+            font-size: 25px;
+        }
+    }
+
+    .breadcrumb {
+        padding-left: 0;
+        background-color: transparent;
+        margin-bottom: 0;
+
+        .breadcrumb-item {
+            margin-top: auto;
+            margin-bottom: auto;
+
+            a {
+                color: #fff;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+
+        .breadcrumb-item+.breadcrumb-item:before {
+            content: "|";
+            color: #fff;
+        }
+
+        .breadcrumb-item.active {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}
+.filter-table-wrapper{
+    @media (max-width: 1199.98px){
+        overflow: auto;
+        padding: 5px;
+    }
+    .filter-table{
+        width: 100%;
+        box-shadow: 0 0 6px #00000029;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        @media (max-width: 1199.98px){
+            min-width: 1140px;
+        }
+        thead{
+            tr{
+                th{
+                   background-color: #F3F5FA; 
+                   font-size: 18px;
+                   color: #4D4D4D;
+                   padding: 15px 10px;
+                   text-align: center;
+                   &:first-child{
+                       text-align: left;
+                       padding-left: 40px;
+                   }
+                }
+            }
+        }
+        tbody{
+            tr{
+                border-top: 1px solid #C5C5C5;
+                box-shadow: 0 0 black;
+                transition: 0.3s;
+                &:first-child{
+                    border-top: none;
+                }
+                &:hover{
+                    box-shadow: 0 0 6px #00000029;
+                }
+                td{
+                    text-align: center;
+                    font-size: 15px;
+                    color: #666666;
+                    font-weight: 400;
+                    padding: 10px;
+                    &:first-child{
+                        text-align: left;
+                        padding-left: 40px;
+                    }
+                    .apply{
+                        border: 1px solid #30CA54;
+                        border-radius: 100px;
+                        background-color: #fff;
+                        color: #30CA54;
+                        font-size: 12px;
+                        font-weight: 500;
+                        width: 90px;
+                        height: 35px;
+                        transition: 0.3s;
+                        &:hover{
+                            background-color: #30CA54;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.pagination {
+    justify-content: center;
+
+    .page-item {
+
+        margin-left: 4px;
+        margin-right: 4px;
+        border: none;
+        margin-top: auto;
+        margin-bottom: auto;
+
+        .page-link {
+            height: 100%;
+            width: 100%;
+            border: none;
+            color: #B2B2B2;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            border-radius: 60px;
+            border: 1px solid#B2B2B2;
+            text-align: center;
+        }
+    }
+
+    .page-item.active {
+        .page-link {
+            font-size: 26px;
+            font-weight: 600;
+            width: 50px;
+            height: 50px;
+            background-color: #0CB100;
+            border: 1px solid #0CB100;
+            border-radius: 50px;
+            color: #fff;
+        }
+    }
+}
+.filterWrapper {
+    .filter {
+        position: relative;
+        cursor: pointer;
+        .filterIcon{
+            @media (max-width: 991.98px){
+                width: 30px;
+            }
+        }
+        ul {
+            position: absolute;
+            display: flex;
+            display: none;
+            left: -25px;
+            top: 14px;
+            transform: translateX(-100%);
+            @media (max-width: 991.98px){
+                left: 40px;
+                top: 38px; 
+                flex-direction: column; 
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0px 0px 18px #00000026;
+                padding: 10px;
+            }
+            li {
+                margin-left: 15px;
+                margin-right: 15px;
+                @media (max-width: 991.98px){
+                    margin-left: 5px;
+                    margin-right: 5px;
+                }
+                .custom-checkbox {
+                    padding-right: 1.5rem;
+                    padding-left: 0;
+
+                    .custom-control-label {
+                        font-size: 13px;
+                        font-weight: 500;
+                        width: max-content;
+                    }
+
+                    .custom-control-label:before {
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 5px;
+                        left: inherit;
+                        right: -1.5rem;
+                        top: 0.05rem;
+                    }
+
+                    .custom-control-label:after {
+                        top: 0.25rem;
+                        right: -1.3rem;
+                        left: inherit;
+                    }
+                }
+            }
+        }
+        ul.active{
+            display: flex;
+        }
+    }
+}
+.modal {
+    .modal-dialog {
+        @media (min-width: 576px) {
+            max-width: 881px;
+        }
+
+        .modal-content {
+            border-radius: 20px;
+            padding: 35px;
+
+            .modal-body {
+                padding: 0;
+
+                .close {
+                    opacity: 1;
+                }
+
+                h1 {
+                    font-size: 36px;
+                    font-weight: bold;
+                    margin-top: 20px;
+                }
+
+                .formWrapper {
+                    max-width: 431px;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    .form-group {
+                        position: relative;
+                        margin-top: 40px;
+                        margin-bottom: 0;
+
+                        img {
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+
+                        .form-control {
+                            border: none;
+                            border-bottom: 1px solid #DFDFDF;
+                            border-radius: 0;
+                            background-color: #fff !important;
+                            padding-left: 30px;
+                            color: #000;
+
+                            &::placeholder {
+                                color: #B2B2B2;
+                                font-size: 16px;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+
+                    .forgotPswd {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 15px;
+
+                        .custom-checkbox {
+                            width: 16px;
+                            height: 16px;
+                        }
+
+                        .custom-control-label {
+                            width: 200px;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 1.6;
+                        }
+
+                        .custom-control-label:before {
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 4px;
+                        }
+
+                        .custom-control-label:after {
+                            width: 13px;
+                            height: 13px;
+                            top: 0.40rem;
+                            left: -1.35rem;
+                        }
+
+                        a {
+                            font-size: 14px;
+                            font-weight: 400;
+                            text-decoration: underline;
+                            color: #000;
+                            transition: 0.3s;
+
+                            &:hover {
+                                color: #30CA54;
+                            }
+                        }
+                    }
+
+                    button {
+                        display: block;
+                        width: 180px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top: 55px;
+                    }
+
+                    .register {
+                        text-align: center;
+                        margin-top: 40px;
+                        margin-bottom: 10px;
+                        font-size: 14px;
+                        font-weight: 400;
+
+                        a {
+                            color: #000;
+                            transition: 0.3s;
+                            text-decoration: underline;
+                            cursor: pointer;
+
+                            &:hover {
+                                color: #30CA54;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

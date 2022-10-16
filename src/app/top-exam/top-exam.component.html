@@ -1,0 +1,43 @@
+
+<div class="inner-banner">
+    <img src="../../assets/images/top-exam/inner-banner-11.png" alt="">
+</div>
+<div class="pageHeading">
+    <div class="container">
+        <h1>Top Exam</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Top Exam</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="notificationWrapper top-xamWrapper">
+    <div class="container">
+        <div *ngFor="let item of topexams">
+        <ul>
+            <li>
+                
+
+                
+                <div class="date">
+                    <h3 class="text-center">{{item.date_of_post | date}}</h3>
+                  
+                </div>
+                <div class="detail">
+                    <p> {{item.description}}</p>
+                    <div class="date-download">
+                        <p><img src="../../assets/images/top-exam/calendar.png" alt=""><span>{{item.exam_date | date}}</span></p>
+                        <a href="" download><img src="../../assets/images/top-exam/download-1.png" alt=""><span>Download
+                                Files</span></a>
+                    </div>
+                </div>
+      
+            </li>
+                   
+        </ul>
+    </div>
+    </div>
+</div>

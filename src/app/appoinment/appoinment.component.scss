@@ -1,0 +1,135 @@
+.privacy-policy-section{
+    margin-top: 80px;
+    @media (max-width: 991.98px){
+        margin-top: 45px;
+    }
+    .main-heading{
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        @media (max-width: 991.98px){
+            font-size: 30px;
+        }
+    }
+    p{
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+}
+.appointment-section{
+    background-color:#F9FAFC;
+    padding-top: 40px;
+    border-radius: 20px;
+    padding-bottom: 60px;
+    h2{
+        font-size: 31px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    .form-group{
+        position: relative;
+        margin-bottom: 50px;
+        max-width: 543px;
+        img{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .green{
+            display: none;
+        }
+        .form-control{
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid #B2B2B2;
+            height: 40px;
+            resize: none;
+            padding-left: 30px;
+            transition: 0.3s;
+            font-size: 16px;
+            font-weight: 400;
+            background-color: transparent;
+            &::placeholder{
+                color: #B2B2B2;
+                transition: 0.3s;
+            }
+            &:focus{
+                border-bottom: 1px solid #80DF96;
+                &::placeholder{
+                    color: #80DF96;
+                }
+                ~.green{
+                    display: inline;
+                }
+                ~.black{
+                    display: none;
+                }
+            }
+        }
+    }
+    .select-below{
+        h3{
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .custom-control-label:before{
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            left: -2.5rem;
+            top: 0.8px;
+        }
+        .custom-control-label:after{
+            width: 14px;
+            height: 14px;  
+            top: 0.25rem;
+            left: -2.3rem; 
+        }
+        .custom-checkbox{
+            margin-bottom: 35px;
+            padding-left: 2.5rem;
+            cursor: pointer;
+        }
+        .custom-control-input{
+            width: 20px;
+            height: 20px;
+            left: 0;
+            top: 3px;
+            cursor: pointer;
+        }
+    }
+    .standard{
+        .custom-control{
+            padding-left: 2.5rem;
+        }
+        .custom-control-label{
+            font-size: 19px;
+            font-weight: 500;
+            color: #000;
+            span{
+                color: #0CB100;
+            }
+        }
+        .custom-control-label:before{
+            width: 26px;
+            height: 26px;
+            border: 2px solid #30CA54;
+            border-radius: 5px;
+            left: -2.5rem;
+            top: 0.15rem;
+        }
+        .custom-control-label:after{
+            width: 20px;
+            height: 20px;
+            top: 0.3rem;
+            left: -2.3rem; 
+        }
+    }
+    .main-btn{
+        width: 150px;
+        height: 50px;
+        margin-top: 30px;
+    }
+}

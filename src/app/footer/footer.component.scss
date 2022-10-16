@@ -1,0 +1,102 @@
+.footer-section{
+    position: relative;
+    background-image: url("../../assets/images/footer/footer-bg.png");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 100px;
+    padding-top: 150px;
+    position: relative;
+    padding-bottom: 50px;
+    @media (max-width: 991.98px){
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+    &::before{
+      content: "";
+      background-image: url(../../assets/images/footer/plus-gp.png);
+      background-repeat: no-repeat;
+      width: 133px;
+      height: 76px;
+      left: 23%;
+      top: -23px;
+      position: absolute;
+    }
+    .footerLogo{
+      margin-bottom: 30px;
+      @media (max-width: 991.98px){
+        margin-top: 30px;
+        margin-bottom: 15px;
+      }
+    }
+    p{
+      font-size: 14px;
+      font-weight: 400;
+      max-width: 284px;
+      color: #616264;
+    }
+    h1{
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 30px;
+      color: #616264;
+      @media (max-width: 991.98px){
+        margin-top: 30px;
+        margin-bottom: 15px;
+      }
+    }
+    ul{
+      li{
+        margin-bottom: 5px;
+        &:hover{
+          a{
+            color: #0CB100;
+          }
+        }
+        a{
+          color: #616264;
+          font-size: 14px;
+          font-weight: 400;
+          transition: 0.3s;
+        }
+      }
+    }
+    .s-media{
+      display: flex;
+      li{
+        width: 32px;
+        height: 32px;
+        border-radius: 100px;
+        background-color: #fff;
+        display: flex;
+        margin-right: 25px;
+        a{
+          margin: auto;
+        }
+      }
+    }
+    h2{
+      display: flex;
+      font-size: 18px;
+      margin-top: 38px;
+      &:hover{
+        color: #0CB100;
+      }
+      img{
+        margin-right: 20px;
+      }
+    }
+    .footer-bottom{
+      text-align: center;
+      margin-top: 50px;
+      img{
+        margin-left: 3px;
+        margin-right: 3px;
+      }
+      span{
+        font-size: 14px;
+        opacity: 0.5;
+        font-weight: 400;
+      }
+    }
+  }
