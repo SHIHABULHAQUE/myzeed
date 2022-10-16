@@ -8,6 +8,8 @@ import { DataService } from 'src/services/data.service';
 })
 export class TopExamComponent implements OnInit {
   topexams: any = [];
+  isProcessing: boolean = false;
+  showError:boolean =false;
   constructor(private dataServ: DataService) { }
 
   ngOnInit(): void {
@@ -15,9 +17,16 @@ export class TopExamComponent implements OnInit {
   }
   getExam() {
     debugger
-    this.dataServ.getExams().subscribe((response :any) => {
-   this.topexams =response.Data
-   console.log(this.topexams)
+    this.isProcessing = true;
+    this.dataServ.getExams().subscribe((response: any) => {
+      this.isProcessing = false;
+      if(response.errorcode == 0){
+        this.topexams = response.Data
+      }
+   else{
+    this.showError=true;
+   }
+
     })
   }
 }

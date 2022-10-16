@@ -15,7 +15,7 @@ const routes: Routes = [
   {
     path:'',
     pathMatch:'full',
-    redirectTo:'Dasboard/appoinment'
+    redirectTo:'Dasboard/find-job'
      },
 ];
 

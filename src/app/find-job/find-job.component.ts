@@ -12,13 +12,12 @@ export class FindJobComponent implements OnInit {
   constructor(private dataServ: DataService) { }
 
   ngOnInit(): void {
-this.getJobs()
+    this.getJobs()
   }
   getJobs() {
-    debugger
-    this.dataServ.getjobs().subscribe((response :any) => {
-   this.tabledata =response.Data
-   console.log(this.tabledata)
+    this.dataServ.getjobs().subscribe((response: any) => {
+      this.tabledata = response.Data
+
     })
   }
 

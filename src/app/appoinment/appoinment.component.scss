@@ -94,16 +94,14 @@
         }
         .custom-control-input{
             width: 20px;
-            height: 20px;
+            height: 15px;
             left: 0;
             top: 3px;
             cursor: pointer;
         }
     }
     .standard{
-        .custom-control{
-            padding-left: 2.5rem;
-        }
+        
         .custom-control-label{
             font-size: 19px;
             font-weight: 500;
@@ -132,4 +130,21 @@
         height: 50px;
         margin-top: 30px;
     }
+}
+.succes{
+    color: green;
+    font-weight: 700;
+
+}
+
+.appointment-section .select-below .custom-control-label:after {
+    width: 14px;
+    height: 0px;
+    top: 0.25rem;
+    left: -2.3rem;
+}
+.appointment-section .select-below .custom-checkbox {
+    margin-bottom: 35px;
+    padding-left: 0px;
+    cursor: pointer;
 }

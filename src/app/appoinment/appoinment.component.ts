@@ -10,7 +10,8 @@ import { DataService } from 'src/services/data.service';
 export class AppoinmentComponent implements OnInit {
 
   requestForm!: FormGroup;
-
+  isProcessing: boolean = false;
+  successmsg:boolean =false;
   submitted = false;
   constructor(private dataServ: DataService,
     private formBuilder: FormBuilder,) { }
@@ -28,6 +29,7 @@ export class AppoinmentComponent implements OnInit {
     })
   }
   onSubmit() {
+    debugger
     this.submitted = true;
     console.log(this.requestForm.value.Name)
     if (this.requestForm.invalid) {
@@ -47,6 +49,7 @@ export class AppoinmentComponent implements OnInit {
     }
     console.log(this.requestForm.value)
     console.log(options)
+    this.isProcessing=true;
     this.dataServ.getappoinment(
 
       {
@@ -57,8 +60,17 @@ export class AppoinmentComponent implements OnInit {
         phone: phone
       }
     ).subscribe((response: any) => {
-      console.log(response)
-      this.requestForm.reset()
+      this.isProcessing =false;
+      if(response.message== 'success'){
+        this.successmsg =true;
+        this.requestForm.reset()
+    
+      }
+   
+        
+      
+    
+     
     })
 
   }
